@@ -1465,3 +1465,57 @@ com.ecommerce.orderservice.controller.OrderController#createOrder(CreateOrderReq
 2025-10-01 15:57:33.399 [http-nio-8081-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/yaml]
 2025-10-01 15:57:33.399 [http-nio-8081-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[Order(id=1, productId=string, quantity=33, status=string, createdAt=2025-09-29 14:13:55.684), Order (truncated)...]
 2025-10-01 15:57:33.401 [http-nio-8081-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-10-01 16:03:56.453 [http-nio-8081-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - OPTIONS "/api/orders/1/status?status=COMPLETED", parameters={masked}
+2025-10-01 16:03:56.454 [http-nio-8081-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.ecommerce.orderservice.controller.OrderController#updateOrder(Long, String)
+2025-10-01 16:03:56.455 [http-nio-8081-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-10-01 16:03:56.458 [http-nio-8081-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - PUT "/api/orders/1/status?status=COMPLETED", parameters={masked}
+2025-10-01 16:03:56.459 [http-nio-8081-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.ecommerce.orderservice.controller.OrderController#updateOrder(Long, String)
+2025-10-01 16:03:56.463 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - select o1_0.id,o1_0.created_at,o1_0.product_id,o1_0.quantity,o1_0.status from orders o1_0 where o1_0.id=?
+2025-10-01 16:03:56.465 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - update orders set created_at=?,product_id=?,quantity=?,status=? where id=?
+2025-10-01 16:03:56.468 [http-nio-8081-exec-7] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitTemplate$$Lambda/0x0000021ad0abc698 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@2234c27b Shared Rabbit Connection: SimpleConnection@1a3f1d87 [delegate=amqp://guest@127.0.0.1:5672/, localPort=58248]
+2025-10-01 16:03:56.468 [http-nio-8081-exec-7] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Publishing message [(Body:'[B@7f6d631e(byte[230])' MessageProperties [headers={}, contentType=text/plain, contentEncoding=UTF-8, contentLength=230, deliveryMode=PERSISTENT, priority=0, deliveryTag=0])] on exchange [order.exchange], routingKey = [order.routing.key]
+2025-10-01 16:03:56.468 [http-nio-8081-exec-7] INFO  c.e.o.service.OrderService - Published event: ORDER_STATUS_UPDATED for order: 1
+2025-10-01 16:03:56.496 [http-nio-8081-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/yaml]
+2025-10-01 16:03:56.497 [http-nio-8081-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [Order(id=1, productId=string, quantity=33, status=COMPLETED, createdAt=2025-09-29 14:13:55.684)]
+2025-10-01 16:03:56.498 [http-nio-8081-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-10-01 16:03:58.491 [http-nio-8081-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - OPTIONS "/api/orders/1", parameters={}
+2025-10-01 16:03:58.491 [http-nio-8081-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.ecommerce.orderservice.controller.OrderController#getOrder(Long)
+2025-10-01 16:03:58.493 [http-nio-8081-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-10-01 16:03:58.495 [http-nio-8081-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/orders/1", parameters={}
+2025-10-01 16:03:58.495 [http-nio-8081-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.ecommerce.orderservice.controller.OrderController#getOrder(Long)
+2025-10-01 16:03:58.499 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - select o1_0.id,o1_0.created_at,o1_0.product_id,o1_0.quantity,o1_0.status from orders o1_0 where o1_0.id=?
+2025-10-01 16:03:58.503 [http-nio-8081-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/yaml]
+2025-10-01 16:03:58.503 [http-nio-8081-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [Order(id=1, productId=string, quantity=33, status=COMPLETED, createdAt=2025-09-29 14:13:55.684)]
+2025-10-01 16:03:58.504 [http-nio-8081-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-10-01 16:04:16.577 [http-nio-8081-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/orders", parameters={}
+2025-10-01 16:04:16.577 [http-nio-8081-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.ecommerce.orderservice.controller.OrderController#createOrder(CreateOrderRequest)
+2025-10-01 16:04:16.584 [http-nio-8081-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CreateOrderRequest(productId=FLOW001, quantity=5)]
+2025-10-01 16:04:16.594 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - insert into orders (created_at,product_id,quantity,status) values (?,?,?,?)
+2025-10-01 16:04:16.611 [http-nio-8081-exec-10] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitTemplate$$Lambda/0x0000021ad0abc698 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@2234c27b Shared Rabbit Connection: SimpleConnection@1a3f1d87 [delegate=amqp://guest@127.0.0.1:5672/, localPort=58248]
+2025-10-01 16:04:16.611 [http-nio-8081-exec-10] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Publishing message [(Body:'[B@5011da2(byte[222])' MessageProperties [headers={}, contentType=text/plain, contentEncoding=UTF-8, contentLength=222, deliveryMode=PERSISTENT, priority=0, deliveryTag=0])] on exchange [order.exchange], routingKey = [order.routing.key]
+2025-10-01 16:04:16.611 [http-nio-8081-exec-10] INFO  c.e.o.service.OrderService - Published event: ORDER_CREATED for order: 32
+2025-10-01 16:04:16.627 [http-nio-8081-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/yaml]
+2025-10-01 16:04:16.627 [http-nio-8081-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [Order(id=32, productId=FLOW001, quantity=5, status=PENDING, createdAt=2025-10-01 16:04:16.5912199)]
+2025-10-01 16:04:16.628 [http-nio-8081-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-10-01 16:04:48.380 [http-nio-8081-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/orders", parameters={}
+2025-10-01 16:04:48.380 [http-nio-8081-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.ecommerce.orderservice.controller.OrderController#getAllOrders()
+2025-10-01 16:04:48.383 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - select o1_0.id,o1_0.created_at,o1_0.product_id,o1_0.quantity,o1_0.status from orders o1_0
+2025-10-01 16:04:48.389 [http-nio-8081-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-10-01 16:04:48.390 [http-nio-8081-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[Order(id=2, productId=string1, quantity=2, status=PENDING, createdAt=2025-09-30 09:38:14.185206), O (truncated)...]
+2025-10-01 16:04:48.391 [http-nio-8081-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-10-01 16:23:25.807 [http-nio-8081-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/orders", parameters={}
+2025-10-01 16:23:25.807 [http-nio-8081-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.ecommerce.orderservice.controller.OrderController#getAllOrders()
+2025-10-01 16:23:25.811 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - select o1_0.id,o1_0.created_at,o1_0.product_id,o1_0.quantity,o1_0.status from orders o1_0
+2025-10-01 16:23:25.819 [http-nio-8081-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json, application/yaml]
+2025-10-01 16:23:25.821 [http-nio-8081-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[Order(id=2, productId=string1, quantity=2, status=PENDING, createdAt=2025-09-30 09:38:14.185206), O (truncated)...]
+2025-10-01 16:23:25.822 [http-nio-8081-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-10-01 16:23:25.886 [http-nio-8081-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/favicon.ico", parameters={}
+2025-10-01 16:23:25.890 [http-nio-8081-exec-6] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-10-01 16:23:25.896 [http-nio-8081-exec-6] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2025-10-01 16:23:25.898 [http-nio-8081-exec-6] DEBUG o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-01 16:23:25.899 [http-nio-8081-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2025-10-01 16:23:25.903 [http-nio-8081-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+2025-10-01 16:23:25.905 [http-nio-8081-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-10-01 16:23:25.910 [http-nio-8081-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json;q=0.8', given [image/avif, image/webp, image/apng, image/svg+xml, image/*, */*;q=0.8] and supported [application/json, application/*+json, application/yaml]
+2025-10-01 16:23:25.913 [http-nio-8081-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Wed Oct 01 16:23:25 TRT 2025, status=404, error=Not Found, path=/favicon.ico}]
+2025-10-01 16:23:25.922 [http-nio-8081-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404

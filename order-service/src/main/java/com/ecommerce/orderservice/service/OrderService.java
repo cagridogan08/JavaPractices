@@ -28,29 +28,20 @@ public class OrderService {
     public List<Order> findAll() {
         return orderRepository.findAll();
     }
+
     @Transactional
     public Order createOrder(CreateOrderRequest order) {
-        // Save order first
         var requestedOrder = new Order();
         requestedOrder.setQuantity(order.getQuantity());
         requestedOrder.setProductId(order.getProductId());
-        try {
-            Order savedOrder = orderRepository.save(requestedOrder);
 
-            // Flush to ensure the order is persisted
-            orderRepository.flush();
+        Order savedOrder = orderRepository.saveAndFlush(requestedOrder);
 
-            // Then publish event (outside transaction would be better)
-            publishOrderEventAsync(savedOrder, "ORDER_CREATED");
+        // Don't catch exceptions here - let them propagate for rollback
+        publishOrderEventAsync(savedOrder, "ORDER_CREATED");
+        indexOrderAsync(savedOrder);
 
-            // Index in Elasticsearch (async)
-            indexOrderAsync(savedOrder);
-            return savedOrder;
-        }
-catch (Exception e) {
-            log.error(e.getMessage());
-        }
-        return null;
+        return savedOrder;
     }
 
     @Transactional
@@ -136,6 +127,13 @@ catch (Exception e) {
         } catch (Exception e) {
             log.error("Error deleting order from Elasticsearch: {}", e.getMessage(), e);
         }
+    }
+
+    public List<Order> searchOrders(String productId, String status) {
+        if (status != null && !status.isEmpty()) {
+            return elasticsearchService.searchOrdersByProductIdAndStatus(productId, status);
+        }
+        return elasticsearchService.searchOrders(productId);
     }
 
 

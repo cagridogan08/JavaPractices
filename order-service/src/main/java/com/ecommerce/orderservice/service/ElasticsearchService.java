@@ -30,6 +30,27 @@ public class ElasticsearchService {
         }
     }
 
+    public List<Order> searchOrdersByProductIdAndStatus(String productId, String status) {
+        try {
+            SearchRequest request = SearchRequest.of(s -> s
+                    .index(INDEX_NAME)
+                    .query(q -> q
+                            .bool(b -> b
+                                    .must(m -> m.match(t -> t.field("productId").query(productId)))
+                                    .must(m -> m.match(t -> t.field("status").query(status)))
+                            )
+                    )
+            );
+            SearchResponse<Order> response = elasticsearchClient.search(request, Order.class);
+            return response.hits().hits().stream()
+                    .map(hit -> hit.source())
+                    .collect(Collectors.toList());
+        } catch (Exception e) {
+            e.printStackTrace();
+            return List.of();
+        }
+    }
+
     public List<Order> searchOrders(String productId) {
         try {
             SearchRequest request = SearchRequest.of(s -> s

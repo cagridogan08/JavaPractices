@@ -4,31 +4,35 @@ import com.ecommerce.Inventory;
 import com.ecommerce.inventoryservice.repository.InventoryRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.dao.OptimisticLockingFailureException;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class InventoryService {
     private final InventoryRepository inventoryRepository;
 
 
     @Transactional
-    public boolean reserveInventory(String productId,Integer quantity){
-        var inventory = inventoryRepository.findByProductId(productId)
-                .orElse(null);
+    public boolean reserveInventory(String productId, Integer quantity) {
+        try {
+            Inventory inventory = inventoryRepository.findByProductId(productId)
+                    .orElseThrow(() -> new RuntimeException("Inventory not found"));
 
-        if (inventory == null) {
-            return false;
-        }
+            int available = inventory.getQuantity() - inventory.getReservedQuantity();
+            if (available < quantity) {
+                return false;
+            }
 
-        int available = inventory.getQuantity() - inventory.getReservedQuantity();
-        if (available >= quantity) {
             inventory.setReservedQuantity(inventory.getReservedQuantity() + quantity);
             inventoryRepository.save(inventory);
             return true;
+        } catch (OptimisticLockingFailureException e) {
+            log.warn("Concurrent update detected, retrying...");
+            return reserveInventory(productId, quantity); // Retry
         }
-
-        return false;
     }
     public Inventory getInventory(String productId) {
         return inventoryRepository.findByProductId(productId)
