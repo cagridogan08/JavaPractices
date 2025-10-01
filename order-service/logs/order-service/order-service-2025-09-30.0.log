@@ -1,0 +1,236 @@
+2025-09-30 15:54:55.111 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-09-30 15:54:55.160 [main] INFO  c.e.o.OrderServiceApplication - Starting OrderServiceApplication using Java 21.0.8 with PID 37388 (D:\Java\simple-microservice\order-service\target\classes started by IOTECH in D:\Java\simple-microservice\order-service)
+2025-09-30 15:54:55.162 [main] DEBUG c.e.o.OrderServiceApplication - Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-09-30 15:54:55.163 [main] INFO  c.e.o.OrderServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-09-30 15:54:56.779 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-30 15:54:56.838 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 48 ms. Found 1 JPA repository interface.
+2025-09-30 15:54:57.474 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2025-09-30 15:54:57.503 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2025-09-30 15:54:57.506 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-30 15:54:57.506 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-30 15:54:58.164 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-09-30 15:54:58.164 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2962 ms
+2025-09-30 15:54:58.306 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-30 15:54:58.364 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-09-30 15:54:58.411 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-09-30 15:54:58.736 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-30 15:54:58.781 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-09-30 15:54:59.010 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7fcc3745
+2025-09-30 15:54:59.013 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-09-30 15:54:59.053 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-30 15:54:59.080 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 15.14
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-30 15:54:59.973 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-30 15:55:00.036 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-30 15:55:00.829 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-30 15:55:00.923 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 10 mappings in 'requestMappingHandlerMapping'
+2025-09-30 15:55:00.972 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-09-30 15:55:00.999 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-09-30 15:55:01.050 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-09-30 15:55:01.239 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2025-09-30 15:55:01.253 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2025-09-30 15:55:01.263 [main] INFO  c.e.o.OrderServiceApplication - Started OrderServiceApplication in 6.702 seconds (process running for 7.228)
+2025-09-30 15:55:29.389 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-30 15:55:29.406 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-09-30 15:55:29.413 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-30 15:55:29.415 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-09-30 15:55:29.418 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-09-30 15:55:42.082 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-09-30 15:55:42.133 [main] INFO  c.e.o.OrderServiceApplication - Starting OrderServiceApplication using Java 21.0.8 with PID 39720 (D:\Java\simple-microservice\order-service\target\classes started by IOTECH in D:\Java\simple-microservice\order-service)
+2025-09-30 15:55:42.134 [main] DEBUG c.e.o.OrderServiceApplication - Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-09-30 15:55:42.134 [main] INFO  c.e.o.OrderServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-09-30 15:55:42.879 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-30 15:55:42.931 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 42 ms. Found 1 JPA repository interface.
+2025-09-30 15:55:43.413 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2025-09-30 15:55:43.425 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2025-09-30 15:55:43.426 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-30 15:55:43.428 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-30 15:55:43.536 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-09-30 15:55:43.537 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1364 ms
+2025-09-30 15:55:43.686 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-30 15:55:43.731 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-09-30 15:55:43.778 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-09-30 15:55:44.048 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-30 15:55:44.076 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-09-30 15:55:44.233 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7ecb9e17
+2025-09-30 15:55:44.234 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-09-30 15:55:44.264 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-30 15:55:44.290 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 15.14
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-30 15:55:45.372 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-30 15:55:45.435 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-30 15:55:46.391 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-30 15:55:46.490 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 10 mappings in 'requestMappingHandlerMapping'
+2025-09-30 15:55:46.538 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-09-30 15:55:46.564 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-09-30 15:55:46.614 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-09-30 15:55:46.794 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2025-09-30 15:55:46.806 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2025-09-30 15:55:46.816 [main] INFO  c.e.o.OrderServiceApplication - Started OrderServiceApplication in 5.283 seconds (process running for 5.799)
+2025-09-30 15:58:55.257 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-30 15:58:55.257 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-09-30 15:58:55.257 [http-nio-8081-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2025-09-30 15:58:55.258 [http-nio-8081-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2025-09-30 15:58:55.258 [http-nio-8081-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2025-09-30 15:58:55.260 [http-nio-8081-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@3b45a3e6
+2025-09-30 15:58:55.260 [http-nio-8081-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@1c0ec502
+2025-09-30 15:58:55.260 [http-nio-8081-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-09-30 15:58:55.260 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2025-09-30 15:58:55.267 [http-nio-8081-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - OPTIONS "/api/orders", parameters={}
+2025-09-30 15:58:55.276 [http-nio-8081-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.ecommerce.orderservice.controller.OrderController#createOrder(CreateOrderRequest)
+2025-09-30 15:58:55.322 [http-nio-8081-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-09-30 15:58:55.327 [http-nio-8081-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/orders", parameters={}
+2025-09-30 15:58:55.329 [http-nio-8081-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.ecommerce.orderservice.controller.OrderController#createOrder(CreateOrderRequest)
+2025-09-30 15:58:55.390 [http-nio-8081-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CreateOrderRequest(productId=LAPTOP001, quantity=5)]
+2025-09-30 15:58:55.427 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - insert into orders (created_at,product_id,quantity,status) values (?,?,?,?)
+2025-09-30 15:58:55.489 [http-nio-8081-exec-2] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2025-09-30 15:58:55.537 [http-nio-8081-exec-2] INFO  o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#3ecc9baa:0/SimpleConnection@2fdfcfab [delegate=amqp://guest@127.0.0.1:5672/, localPort=49932]
+2025-09-30 15:58:55.540 [http-nio-8081-exec-2] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Initializing declarations
+2025-09-30 15:58:55.549 [http-nio-8081-exec-2] DEBUG o.s.a.r.c.CachingConnectionFactory - Creating cached Rabbit Channel from AMQChannel(amqp://guest@127.0.0.1:5672/,1)
+2025-09-30 15:58:55.557 [http-nio-8081-exec-2] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitAdmin$$Lambda/0x000002b801adad40 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@850a629 Shared Rabbit Connection: SimpleConnection@2fdfcfab [delegate=amqp://guest@127.0.0.1:5672/, localPort=49932]
+2025-09-30 15:58:55.557 [http-nio-8081-exec-2] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - declaring Exchange 'order.exchange'
+2025-09-30 15:58:55.561 [http-nio-8081-exec-2] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - declaring Queue 'order.queue'
+2025-09-30 15:58:55.565 [http-nio-8081-exec-2] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Binding destination [order.queue (QUEUE)] to exchange [order.exchange] with routing key [order.routing.key]
+2025-09-30 15:58:55.578 [http-nio-8081-exec-2] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Declarations finished
+2025-09-30 15:58:55.578 [http-nio-8081-exec-2] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitTemplate$$Lambda/0x000002b801ab7c58 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@850a629 Shared Rabbit Connection: SimpleConnection@2fdfcfab [delegate=amqp://guest@127.0.0.1:5672/, localPort=49932]
+2025-09-30 15:58:55.587 [http-nio-8081-exec-2] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Publishing message [(Body:'[B@246fff34(byte[170])' MessageProperties [headers={}, contentType=text/plain, contentEncoding=UTF-8, contentLength=170, deliveryMode=PERSISTENT, priority=0, deliveryTag=0])] on exchange [order.exchange], routingKey = [order.routing.key]
+2025-09-30 15:58:55.591 [http-nio-8081-exec-2] INFO  c.e.o.service.OrderService - Published event: ORDER_CREATED for order: 3
+2025-09-30 15:58:55.628 [http-nio-8081-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/yaml]
+2025-09-30 15:58:55.630 [http-nio-8081-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [Order(id=3, productId=LAPTOP001, quantity=5, status=PENDING, createdAt=2025-09-30T15:58:55.410135100 (truncated)...]
+2025-09-30 15:58:55.635 [http-nio-8081-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-09-30 15:59:01.105 [http-nio-8081-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - OPTIONS "/api/orders/3", parameters={}
+2025-09-30 15:59:01.106 [http-nio-8081-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.ecommerce.orderservice.controller.OrderController#getOrder(Long)
+2025-09-30 15:59:01.106 [http-nio-8081-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-09-30 15:59:01.110 [http-nio-8081-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/orders/3", parameters={}
+2025-09-30 15:59:01.112 [http-nio-8081-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.ecommerce.orderservice.controller.OrderController#getOrder(Long)
+2025-09-30 15:59:01.128 [http-nio-8081-exec-4] DEBUG org.hibernate.SQL - select o1_0.id,o1_0.created_at,o1_0.product_id,o1_0.quantity,o1_0.status from orders o1_0 where o1_0.id=?
+2025-09-30 15:59:01.143 [http-nio-8081-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/yaml]
+2025-09-30 15:59:01.143 [http-nio-8081-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [Order(id=3, productId=LAPTOP001, quantity=5, status=PENDING, createdAt=2025-09-30T15:58:55.410135)]
+2025-09-30 15:59:01.143 [http-nio-8081-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-09-30 15:59:04.115 [http-nio-8081-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - OPTIONS "/api/orders/3/status?status=CONFIRMED", parameters={masked}
+2025-09-30 15:59:04.118 [http-nio-8081-exec-5] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-09-30 15:59:04.119 [http-nio-8081-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 403 FORBIDDEN
+2025-09-30 15:59:40.670 [http-nio-8081-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/orders", parameters={}
+2025-09-30 15:59:40.670 [http-nio-8081-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.ecommerce.orderservice.controller.OrderController#getAllOrders()
+2025-09-30 15:59:40.751 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - select o1_0.id,o1_0.created_at,o1_0.product_id,o1_0.quantity,o1_0.status from orders o1_0
+2025-09-30 15:59:40.759 [http-nio-8081-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-09-30 15:59:40.759 [http-nio-8081-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[Order(id=1, productId=string, quantity=33, status=string, createdAt=2025-09-29T14:13:55.684), Order (truncated)...]
+2025-09-30 15:59:40.761 [http-nio-8081-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-09-30 16:21:05.950 [http-nio-8081-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/orders", parameters={}
+2025-09-30 16:21:05.950 [http-nio-8081-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.ecommerce.orderservice.controller.OrderController#createOrder(CreateOrderRequest)
+2025-09-30 16:21:05.954 [http-nio-8081-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CreateOrderRequest(productId=LAPTOP002, quantity=3)]
+2025-09-30 16:21:05.956 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - insert into orders (created_at,product_id,quantity,status) values (?,?,?,?)
+2025-09-30 16:21:05.959 [http-nio-8081-exec-9] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitTemplate$$Lambda/0x000002b801ab7c58 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@850a629 Shared Rabbit Connection: SimpleConnection@2fdfcfab [delegate=amqp://guest@127.0.0.1:5672/, localPort=49932]
+2025-09-30 16:21:05.960 [http-nio-8081-exec-9] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Publishing message [(Body:'[B@1c23576f(byte[170])' MessageProperties [headers={}, contentType=text/plain, contentEncoding=UTF-8, contentLength=170, deliveryMode=PERSISTENT, priority=0, deliveryTag=0])] on exchange [order.exchange], routingKey = [order.routing.key]
+2025-09-30 16:21:05.960 [http-nio-8081-exec-9] INFO  c.e.o.service.OrderService - Published event: ORDER_CREATED for order: 4
+2025-09-30 16:21:05.971 [http-nio-8081-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/yaml]
+2025-09-30 16:21:05.972 [http-nio-8081-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [Order(id=4, productId=LAPTOP002, quantity=3, status=PENDING, createdAt=2025-09-30T16:21:05.956259400 (truncated)...]
+2025-09-30 16:21:05.972 [http-nio-8081-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-09-30 16:23:29.032 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-30 16:23:29.044 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-09-30 16:23:29.049 [SpringApplicationShutdownHook] DEBUG o.s.a.r.c.CachingConnectionFactory - Closing cached Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1)
+2025-09-30 16:23:29.060 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-30 16:23:29.062 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-09-30 16:23:29.064 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-09-30 16:24:50.604 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-09-30 16:24:50.648 [main] INFO  c.e.o.OrderServiceApplication - Starting OrderServiceApplication using Java 21.0.8 with PID 29700 (D:\Java\simple-microservice\order-service\target\classes started by IOTECH in D:\Java\simple-microservice\order-service)
+2025-09-30 16:24:50.649 [main] DEBUG c.e.o.OrderServiceApplication - Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-09-30 16:24:50.650 [main] INFO  c.e.o.OrderServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-09-30 16:24:51.262 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-30 16:24:51.318 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 40 ms. Found 1 JPA repository interface.
+2025-09-30 16:24:51.787 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2025-09-30 16:24:51.797 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2025-09-30 16:24:51.799 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-30 16:24:51.800 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-30 16:24:51.896 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-09-30 16:24:51.897 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1209 ms
+2025-09-30 16:24:52.027 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-30 16:24:52.068 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-09-30 16:24:52.095 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-09-30 16:24:52.346 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-30 16:24:52.375 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-09-30 16:24:52.508 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@559e3f67
+2025-09-30 16:24:52.510 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-09-30 16:24:52.538 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-30 16:24:52.559 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 15.14
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-30 16:24:53.423 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-30 16:24:53.477 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-30 16:24:54.309 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-30 16:24:54.410 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 10 mappings in 'requestMappingHandlerMapping'
+2025-09-30 16:24:54.451 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-09-30 16:24:54.476 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-09-30 16:24:54.518 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-09-30 16:24:54.690 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2025-09-30 16:24:54.702 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2025-09-30 16:24:54.710 [main] INFO  c.e.o.OrderServiceApplication - Started OrderServiceApplication in 4.585 seconds (process running for 5.057)
+2025-09-30 16:25:49.317 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-30 16:25:49.317 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-09-30 16:25:49.317 [http-nio-8081-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2025-09-30 16:25:49.318 [http-nio-8081-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2025-09-30 16:25:49.318 [http-nio-8081-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2025-09-30 16:25:49.319 [http-nio-8081-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@146b4c6c
+2025-09-30 16:25:49.319 [http-nio-8081-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@7c290246
+2025-09-30 16:25:49.320 [http-nio-8081-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-09-30 16:25:49.320 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2025-09-30 16:25:49.327 [http-nio-8081-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/orders", parameters={}
+2025-09-30 16:25:49.337 [http-nio-8081-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.ecommerce.orderservice.controller.OrderController#createOrder(CreateOrderRequest)
+2025-09-30 16:25:49.468 [http-nio-8081-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CreateOrderRequest(productId=LAPTOP002, quantity=1)]
+2025-09-30 16:25:49.509 [http-nio-8081-exec-1] DEBUG org.hibernate.SQL - insert into orders (created_at,product_id,quantity,status) values (?,?,?,?)
+2025-09-30 16:25:49.580 [http-nio-8081-exec-1] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2025-09-30 16:25:49.624 [http-nio-8081-exec-1] INFO  o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#13976c57:0/SimpleConnection@62b78479 [delegate=amqp://guest@127.0.0.1:5672/, localPort=58871]
+2025-09-30 16:25:49.628 [http-nio-8081-exec-1] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Initializing declarations
+2025-09-30 16:25:49.637 [http-nio-8081-exec-1] DEBUG o.s.a.r.c.CachingConnectionFactory - Creating cached Rabbit Channel from AMQChannel(amqp://guest@127.0.0.1:5672/,1)
+2025-09-30 16:25:49.645 [http-nio-8081-exec-1] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitAdmin$$Lambda/0x0000019032ad6408 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@4252f408 Shared Rabbit Connection: SimpleConnection@62b78479 [delegate=amqp://guest@127.0.0.1:5672/, localPort=58871]
+2025-09-30 16:25:49.646 [http-nio-8081-exec-1] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - declaring Exchange 'order.exchange'
+2025-09-30 16:25:49.649 [http-nio-8081-exec-1] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - declaring Queue 'order.queue'
+2025-09-30 16:25:49.653 [http-nio-8081-exec-1] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Binding destination [order.queue (QUEUE)] to exchange [order.exchange] with routing key [order.routing.key]
+2025-09-30 16:25:49.658 [http-nio-8081-exec-1] DEBUG o.s.amqp.rabbit.core.RabbitAdmin - Declarations finished
+2025-09-30 16:25:49.658 [http-nio-8081-exec-1] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Executing callback RabbitTemplate$$Lambda/0x0000019032ab3498 on RabbitMQ Channel: Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@4252f408 Shared Rabbit Connection: SimpleConnection@62b78479 [delegate=amqp://guest@127.0.0.1:5672/, localPort=58871]
+2025-09-30 16:25:49.667 [http-nio-8081-exec-1] DEBUG o.s.amqp.rabbit.core.RabbitTemplate - Publishing message [(Body:'[B@737dfca5(byte[170])' MessageProperties [headers={}, contentType=text/plain, contentEncoding=UTF-8, contentLength=170, deliveryMode=PERSISTENT, priority=0, deliveryTag=0])] on exchange [order.exchange], routingKey = [order.routing.key]
+2025-09-30 16:25:49.670 [http-nio-8081-exec-1] INFO  c.e.o.service.OrderService - Published event: ORDER_CREATED for order: 6
+2025-09-30 16:25:49.705 [http-nio-8081-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/yaml]
+2025-09-30 16:25:49.706 [http-nio-8081-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [Order(id=6, productId=LAPTOP002, quantity=1, status=PENDING, createdAt=2025-09-30T16:25:49.491661400 (truncated)...]
+2025-09-30 16:25:49.714 [http-nio-8081-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-09-30 17:16:03.182 [http-nio-8081-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/orders", parameters={}
+2025-09-30 17:16:03.182 [http-nio-8081-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.ecommerce.orderservice.controller.OrderController#getAllOrders()
+2025-09-30 17:16:03.288 [http-nio-8081-exec-3] DEBUG org.hibernate.SQL - select o1_0.id,o1_0.created_at,o1_0.product_id,o1_0.quantity,o1_0.status from orders o1_0
+2025-09-30 17:16:03.305 [http-nio-8081-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2025-09-30 17:16:03.306 [http-nio-8081-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[Order(id=1, productId=string, quantity=33, status=string, createdAt=2025-09-29T14:13:55.684), Order (truncated)...]
+2025-09-30 17:16:03.308 [http-nio-8081-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-09-30 17:16:20.703 [http-nio-8081-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - OPTIONS "/api/orders/3/status?status=CANCELLED", parameters={masked}
+2025-09-30 17:16:20.705 [http-nio-8081-exec-5] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-09-30 17:16:20.706 [http-nio-8081-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 403 FORBIDDEN
+2025-09-30 17:16:23.758 [http-nio-8081-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - OPTIONS "/api/orders/3", parameters={}
+2025-09-30 17:16:23.759 [http-nio-8081-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.ecommerce.orderservice.controller.OrderController#getOrder(Long)
+2025-09-30 17:16:23.760 [http-nio-8081-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-09-30 17:16:23.762 [http-nio-8081-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/orders/3", parameters={}
+2025-09-30 17:16:23.763 [http-nio-8081-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.ecommerce.orderservice.controller.OrderController#getOrder(Long)
+2025-09-30 17:16:23.772 [http-nio-8081-exec-7] DEBUG org.hibernate.SQL - select o1_0.id,o1_0.created_at,o1_0.product_id,o1_0.quantity,o1_0.status from orders o1_0 where o1_0.id=?
+2025-09-30 17:16:23.777 [http-nio-8081-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/yaml]
+2025-09-30 17:16:23.777 [http-nio-8081-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [Order(id=3, productId=LAPTOP001, quantity=5, status=PENDING, createdAt=2025-09-30T15:58:55.410135)]
+2025-09-30 17:16:23.779 [http-nio-8081-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-09-30 17:16:27.636 [http-nio-8081-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - OPTIONS "/api/orders/3/status?status=CANCELLED", parameters={masked}
+2025-09-30 17:16:27.637 [http-nio-8081-exec-9] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-09-30 17:16:27.638 [http-nio-8081-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 403 FORBIDDEN
+2025-09-30 17:16:29.359 [http-nio-8081-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - OPTIONS "/api/orders/3", parameters={}
+2025-09-30 17:16:29.361 [http-nio-8081-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping$HttpOptionsHandler#handle()
+2025-09-30 17:16:29.362 [http-nio-8081-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 403 FORBIDDEN
